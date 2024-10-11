@@ -6,7 +6,7 @@ const {userRegisteration} = require("../Controllers/userController")
 
 router.use(cookieParser())
 
-router.get("/", userRegisteration)
+router.post("/", userRegisteration)
 
 router.get("/cookie", (req, res) => {
     res.send(req.cookies)
