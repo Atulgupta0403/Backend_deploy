@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
-mongoose.connect(`mongodb+srv://atulgupta0403:Atul%402004@cluster0.kvruf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
+// mongoose.connect(`mongodb+srv://atulgupta0403:Atul%402004@cluster0.kvruf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
+mongoose.connect("mongodb://localhost:27017/Ecommerce")
 
 const userSchema = new mongoose.Schema({
     username : {
@@ -41,4 +42,4 @@ const userSchema = new mongoose.Schema({
 
 })
 
-module.exports = mongoose.model("user",userSchema);
+module.exports = mongoose.model("User",userSchema);

@@ -2,8 +2,6 @@ const express = require("express");
 const app = express();
 
 
-
-
 const register = require("./Routes/register")
 const login = require("./Routes/login")
 const logout = require("./Routes/logout")
@@ -22,4 +20,6 @@ app.use("/logout",logout)
 app.use("/addItem",addItem)
 
 
-app.listen(3000)
+app.listen(3000 , () => {
+    console.log("app is listening at port 3000")
+})
